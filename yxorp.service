@@ -1,0 +1,12 @@
+[Unit]
+Description=Yxorp Reverse Proxy
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/yxorp
+ExecStart=/opt/yxorp/yxorp -cfg config.json
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
